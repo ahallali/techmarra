@@ -31,5 +31,11 @@ export default function RootLayout({
 }
 
 export const metadata = {
-      generator: 'v0.app'
-    };
+  title: "TechMarra — Web design & development",
+  description:
+    "Modern websites and digital experiences for riads and businesses — built with Next.js by TechMarra.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
+  };

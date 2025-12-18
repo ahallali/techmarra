@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Facebook, Instagram, Mail, Phone } from "lucide-react"
+import { Facebook, Instagram, Mail, Phone, Linkedin } from "lucide-react"
 import Image from "next/image"
 import { useLanguage } from "@/lib/language-context"
 import { translations } from "@/lib/translations"
@@ -85,16 +85,25 @@ export function Footer() {
             <p className="font-semibold text-foreground mb-4">{t.footer.followUs}</p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/TechMarra"
                 className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors"
+                aria-label="Facebook"
               >
                 <Facebook size={18} />
               </a>
               <a
                 href="#"
                 className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors"
+                aria-label="Instagram"
               >
                 <Instagram size={18} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/tech-marra/ "
+                className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={18} />
               </a>
             </div>
           </div>

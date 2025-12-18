@@ -10,19 +10,22 @@ export function Team() {
 
     const team = [
         {
-            name: "Ahmed El Mansouri",
-            role: "Founder & Lead Developer",
-            image: "/team-1.jpg", // Placeholder
+            name: "zakaria Mrabet",
+            role: "Senior AI Engineer",
+            image: "/zack.png",
+            linkedin: "https://www.linkedin.com/in/zakariaemrabet/",     
         },
         {
-            name: "Sarah Bennani",
-            role: "Creative Director",
-            image: "/team-2.jpg", // Placeholder
+            name: "aymane biri",
+            role: "senior software/AI engineer",
+            image: "/aymane.jpeg",
+            linkedin: "https://www.linkedin.com/in/aymane-biri/",
         },
         {
-            name: "Youssef Alami",
-            role: "Marketing Strategist",
-            image: "/team-3.jpg", // Placeholder
+            name: "oussama sallak",
+            role: "Full-Stack & AI Engineer",
+            image: "/oussama.png",
+            linkedin: "https://www.linkedin.com/in/osallak/",
         },
     ]
 
@@ -38,20 +41,29 @@ export function Team() {
                 <div className="grid gap-8 md:grid-cols-3">
                     {team.map((member, index) => (
                         <div key={index} className="group relative overflow-hidden rounded-2xl bg-card border border-border">
-                            <div className="aspect-[4/5] bg-secondary/20 relative overflow-hidden">
-                                {/* Placeholder for image */}
-                                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 text-primary font-bold text-4xl">
-                                    {member.name.charAt(0)}
-                                </div>
+                            <div className="aspect-4/5 bg-secondary/20 relative overflow-hidden">
+                                {/* Team image */}
+                                <img
+                                    src={member.image}
+                                    alt={member.name}
+                                    loading="lazy"
+                                    className="absolute inset-0 h-full w-full object-cover"
+                                />
 
                                 {/* Overlay with socials */}
-                                <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                                    <a href="#" className="p-2 bg-white rounded-full text-primary hover:scale-110 transition-transform">
-                                        <Linkedin className="w-5 h-5" />
-                                    </a>
-                                    <a href="#" className="p-2 bg-white rounded-full text-primary hover:scale-110 transition-transform">
-                                        <Twitter className="w-5 h-5" />
-                                    </a>
+                                <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 z-10">
+                                    {member.linkedin && (
+                                        <a
+                                            href={member.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label={`LinkedIn - ${member.name}`}
+                                            className="p-2 bg-white rounded-full text-primary hover:scale-110 transition-transform"
+                                        >
+                                            <Linkedin className="w-5 h-5" />
+                                        </a>
+                                    )}
+
                                 </div>
                             </div>
                             <div className="p-6 text-center">

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useLanguage } from "@/lib/language-context"
 import { translations } from "@/lib/translations"
 
@@ -34,12 +35,18 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground hover:opacity-90 transition-opacity shadow-lg hover:shadow-xl">
+              <Link
+                href="/contact"
+                className="rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground hover:opacity-90 transition-opacity shadow-lg hover:shadow-xl text-center"
+              >
                 {t.hero.claimDiscount}
-              </button>
-              <button className="rounded-full border-2 border-primary px-8 py-4 text-base font-semibold text-primary hover:bg-primary/5 transition-colors">
+              </Link>
+              <Link
+                href="/portfolio"
+                className="rounded-full border-2 border-primary px-8 py-4 text-base font-semibold text-primary hover:bg-primary/5 transition-colors text-center"
+              >
                 {t.hero.learnMore}
-              </button>
+              </Link>
             </div>
 
             <div className="pt-8 space-y-3 border-t border-border">
@@ -55,9 +62,9 @@ export function Hero() {
           {/* Visual - Image placeholder */}
           <div className="relative h-96 md:h-full rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 border border-border">
             <img
-              src="/luxury-moroccan-riad-website-preview.jpg"
+              src="/riad_elfassia.jpg"
               alt="Modern website preview"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-fill"
             />
           </div>
         </div>

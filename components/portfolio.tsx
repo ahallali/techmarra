@@ -23,9 +23,10 @@ const portfolioItems = [
   },
   {
     id: 3,
-    name: "Riad Dar Anika",
+    name: "Riad Al-Fassia",
     category: "Hospitality",
-    image: "/boutique-riad-medina-website.jpg",
+    image: "/riad-elfassia.png",
+    url: "https://riad-demo.vercel.app/",
     features: ["bookingIntegration", "gallery", "reviews"],
   },
   {
@@ -107,16 +108,27 @@ export function Portfolio({ full }: { full?: boolean }) {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  onError={(e) => {
-                    // Fallback if image doesn't exist yet
-                    e.currentTarget.src = "/luxury-moroccan-riad-website.jpg"
-                  }}
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  // onError={(e) => {
+                  //   // Fallback if image doesn't exist yet
+                  //   e.currentTarget.src = "/luxury-moroccan-riad-website.jpg"
+                  // }}
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-2 rounded-full flex items-center gap-2 font-medium hover:bg-white/20 transition-colors">
-                    View Project <ExternalLink className="w-4 h-4" />
-                  </button>
+                  {item.url ? (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-2 rounded-full flex items-center gap-2 font-medium hover:bg-white/20 transition-colors"
+                    >
+                      View Project <ExternalLink className="w-4 h-4" />
+                    </a>
+                  ) : (
+                    <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-2 rounded-full flex items-center gap-2 font-medium hover:bg-white/20 transition-colors">
+                      View Project <ExternalLink className="w-4 h-4" />
+                    </button>
+                  )}
                 </div>
               </div>
 
