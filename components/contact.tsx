@@ -59,10 +59,10 @@ export function Contact({ full }: { full?: boolean }) {
                 <div>
                   <p className="font-semibold text-foreground">{t.contact.email}</p>
                   <a
-                    href="mailto:hello@techmarra.com"
+                    href="mailto:contact@techmarra.ma"
                     className="text-foreground/70 hover:text-primary transition-colors"
                   >
-                    hello@techmarra.com
+                    contact@techmarra.ma
                   </a>
                 </div>
               </div>
@@ -75,8 +75,8 @@ export function Contact({ full }: { full?: boolean }) {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">{t.contact.phone}</p>
-                  <a href="tel:+212612345678" className="text-foreground/70 hover:text-primary transition-colors">
-                    +212 612 345 678
+                  <a href="tel:+212614755457" className="text-foreground/70 hover:text-primary transition-colors">
+                    +212 614 755 457
                   </a>
                 </div>
               </div>

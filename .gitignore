@@ -1,0 +1,88 @@
+# Node
+node_modules/
+
+# Next.js build output
+.next/*
+out/
+build/
+
+# Production
+dist/
+
+# Local env files
+.env
+.env.*.local
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+/*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Coverage
+coverage/
+coverage-final.json
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Vercel/Netlify
+.vercel/
+.vercel_build_output/
+.netlify/
+
+# Misc
+*.pem
+*.key
+*.local
+
+# Optional: lockfiles for other package managers (if present)
+package-lock.json
+yarn.lock
+
+# Ignore build/system files
+*.tgz
+
+# Optional: Mac/Windows metadata
+ehthumbs.db
+Icon\r
+
+# pnpm store (if local)
+.pnpm-store/
+
+# Storybook
+.out-
+
+# Environment RCs
+.envrc
+
+# Editor backup files
+*~
+*.swp
+
+# JetBrains
+*.iml
+.idea/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Terraform
+.terraform/
+
+# End of file

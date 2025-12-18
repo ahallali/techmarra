@@ -63,18 +63,18 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="mailto:hello@techmarra.com"
+                  href="mailto:contact@techmarra.ma"
                   className="text-sm text-foreground/70 hover:text-primary transition-colors flex items-center gap-2"
                 >
-                  <Mail size={16} /> hello@techmarra.com
+                  <Mail size={16} /> contact@techmarra.ma
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+212612345678"
+                  href="tel:+212614755457"
                   className="text-sm text-foreground/70 hover:text-primary transition-colors flex items-center gap-2"
                 >
-                  <Phone size={16} /> +212 612 345 678
+                  <Phone size={16} /> +212 614 755 457
                 </a>
               </li>
             </ul>
