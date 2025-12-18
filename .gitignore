@@ -86,3 +86,10 @@ npm-debug.log*
 .terraform/
 
 # End of file
+git fetch origin
+git pull --rebase origin main
+# Resolve any conflicts if they appear, then:
+git add <conflicted-files>
+git rebase --continue
+# Finally push
+git push origin main
