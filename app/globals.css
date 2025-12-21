@@ -3,81 +3,95 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Premium Color Palette */
 :root {
-  /* Updated primary color to match TechMarra teal brand */
-  --background: oklch(0.98 0.002 70);
-  --foreground: oklch(0.18 0.04 280);
+  /* Rich deep blue primary with warmth */
+  --background: oklch(0.98 0.005 240);
+  --foreground: oklch(0.15 0.03 260);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.04 280);
+  --card-foreground: oklch(0.15 0.03 260);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.04 280);
-  --primary: oklch(0.32 0.14 240);
-  --primary-foreground: oklch(0.98 0.002 70);
-  --secondary: oklch(0.92 0.01 200);
-  --secondary-foreground: oklch(0.18 0.04 280);
-  --muted: oklch(0.95 0.005 0);
-  --muted-foreground: oklch(0.5 0.02 280);
-  --accent: oklch(0.6 0.18 45);
-  --accent-foreground: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.03 260);
+
+  /* Deep sophisticated navy blue */
+  --primary: oklch(0.35 0.12 250);
+  --primary-foreground: oklch(0.98 0.005 240);
+
+  /* Soft elegant secondary */
+  --secondary: oklch(0.94 0.01 250);
+  --secondary-foreground: oklch(0.15 0.03 260);
+
+  --muted: oklch(0.96 0.005 240);
+  --muted-foreground: oklch(0.45 0.02 260);
+
+  /* Warm Moroccan gold accent */
+  --accent: oklch(0.72 0.18 55);
+  --accent-foreground: oklch(0.15 0.03 260);
+
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.01 200);
-  --input: oklch(0.96 0.005 0);
-  --ring: oklch(0.32 0.14 240);
-  --chart-1: oklch(0.32 0.14 240);
-  --chart-2: oklch(0.6 0.18 45);
+  --border: oklch(0.90 0.01 250);
+  --input: oklch(0.96 0.005 240);
+  --ring: oklch(0.35 0.12 250);
+
+  /* Chart colors */
+  --chart-1: oklch(0.35 0.12 250);
+  --chart-2: oklch(0.72 0.18 55);
   --chart-3: oklch(0.75 0.12 100);
   --chart-4: oklch(0.55 0.14 20);
   --chart-5: oklch(0.65 0.16 10);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.98 0.002 70);
-  --sidebar-foreground: oklch(0.18 0.04 280);
-  --sidebar-primary: oklch(0.32 0.14 240);
-  --sidebar-primary-foreground: oklch(0.98 0.002 70);
-  --sidebar-accent: oklch(0.6 0.18 45);
-  --sidebar-accent-foreground: oklch(0.18 0.04 280);
-  --sidebar-border: oklch(0.92 0.01 200);
-  --sidebar-ring: oklch(0.32 0.14 240);
+
+  --radius: 0.75rem;
+
+  /* Sidebar */
+  --sidebar: oklch(0.98 0.005 240);
+  --sidebar-foreground: oklch(0.15 0.03 260);
+  --sidebar-primary: oklch(0.35 0.12 250);
+  --sidebar-primary-foreground: oklch(0.98 0.005 240);
+  --sidebar-accent: oklch(0.72 0.18 55);
+  --sidebar-accent-foreground: oklch(0.15 0.03 260);
+  --sidebar-border: oklch(0.90 0.01 250);
+  --sidebar-ring: oklch(0.35 0.12 250);
 }
 
 .dark {
-  --background: oklch(0.15 0.02 280);
-  --foreground: oklch(0.95 0.005 200);
-  --card: oklch(0.2 0.02 280);
-  --card-foreground: oklch(0.95 0.005 200);
-  --popover: oklch(0.2 0.02 280);
-  --popover-foreground: oklch(0.95 0.005 200);
-  --primary: oklch(0.55 0.18 240);
-  --primary-foreground: oklch(0.15 0.02 280);
-  --secondary: oklch(0.25 0.03 200);
-  --secondary-foreground: oklch(0.95 0.005 200);
-  --muted: oklch(0.3 0.02 280);
-  --muted-foreground: oklch(0.6 0.02 200);
-  --accent: oklch(0.75 0.2 45);
-  --accent-foreground: oklch(0.15 0.02 280);
+  --background: oklch(0.12 0.02 260);
+  --foreground: oklch(0.95 0.005 240);
+  --card: oklch(0.16 0.02 260);
+  --card-foreground: oklch(0.95 0.005 240);
+  --popover: oklch(0.16 0.02 260);
+  --popover-foreground: oklch(0.95 0.005 240);
+  --primary: oklch(0.60 0.15 250);
+  --primary-foreground: oklch(0.12 0.02 260);
+  --secondary: oklch(0.22 0.03 260);
+  --secondary-foreground: oklch(0.95 0.005 240);
+  --muted: oklch(0.25 0.02 260);
+  --muted-foreground: oklch(0.65 0.02 240);
+  --accent: oklch(0.78 0.2 55);
+  --accent-foreground: oklch(0.12 0.02 260);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.25 0.03 200);
-  --input: oklch(0.25 0.03 200);
-  --ring: oklch(0.55 0.18 240);
-  --chart-1: oklch(0.55 0.18 240);
-  --chart-2: oklch(0.75 0.2 45);
+  --border: oklch(0.25 0.03 260);
+  --input: oklch(0.22 0.03 260);
+  --ring: oklch(0.60 0.15 250);
+  --chart-1: oklch(0.60 0.15 250);
+  --chart-2: oklch(0.78 0.2 55);
   --chart-3: oklch(0.8 0.15 100);
   --chart-4: oklch(0.65 0.18 20);
   --chart-5: oklch(0.7 0.2 10);
-  --sidebar: oklch(0.15 0.02 280);
-  --sidebar-foreground: oklch(0.95 0.005 200);
-  --sidebar-primary: oklch(0.55 0.18 240);
-  --sidebar-primary-foreground: oklch(0.15 0.02 280);
-  --sidebar-accent: oklch(0.75 0.2 45);
-  --sidebar-accent-foreground: oklch(0.15 0.02 280);
-  --sidebar-border: oklch(0.25 0.03 200);
-  --sidebar-ring: oklch(0.55 0.18 240);
+  --sidebar: oklch(0.12 0.02 260);
+  --sidebar-foreground: oklch(0.95 0.005 240);
+  --sidebar-primary: oklch(0.60 0.15 250);
+  --sidebar-primary-foreground: oklch(0.12 0.02 260);
+  --sidebar-accent: oklch(0.78 0.2 55);
+  --sidebar-accent-foreground: oklch(0.12 0.02 260);
+  --sidebar-border: oklch(0.25 0.03 260);
+  --sidebar-ring: oklch(0.60 0.15 250);
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: "Geist", "Inter", system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Fira Code", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -87,7 +101,7 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
@@ -120,7 +134,577 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ========================================
+   PREMIUM ANIMATIONS & EFFECTS
+   ======================================== */
+
+/* Animated Gradient Background */
+@keyframes gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+.animate-gradient-slow {
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Glassmorphism Effects */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(20, 20, 30, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-strong {
+  background: rgba(20, 20, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Premium Shadows */
+.shadow-premium {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 20px -5px rgba(0, 0, 0, 0.08),
+    0 25px 50px -12px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-premium-lg {
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 25px 50px -12px rgba(0, 0, 0, 0.15),
+    0 50px 100px -20px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-glow {
+  box-shadow:
+    0 0 20px rgba(var(--primary), 0.15),
+    0 0 40px rgba(var(--primary), 0.1);
+}
+
+.shadow-glow-accent {
+  box-shadow:
+    0 0 20px rgba(var(--accent), 0.2),
+    0 0 40px rgba(var(--accent), 0.15);
+}
+
+/* Gradient Borders */
+.gradient-border {
+  position: relative;
+  background: var(--card);
+  border-radius: var(--radius);
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Noise/Grain Texture */
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* Floating Animation */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float 4s ease-in-out infinite 2s;
+}
+
+/* Pulse Glow */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(var(--primary), 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(var(--primary), 0.5), 0 0 60px rgba(var(--primary), 0.3);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Shimmer Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg,
+      transparent 25%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Text Gradient */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-animated {
+  background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 3s linear infinite;
+}
+
+/* Premium Button Styles */
+.btn-premium {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-premium:hover::before {
+  left: 100%;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(var(--primary), 0.4);
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 40px -15px rgba(0, 0, 0, 0.15),
+    0 0 30px rgba(var(--primary), 0.1);
+}
+
+/* 3D Card Effect */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.card-3d:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-5px);
+}
+
+/* Geometric Decorations */
+.geometric-decoration {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* Line Draw Animation */
+@keyframes line-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-line-draw {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: line-draw 2s ease-out forwards;
+}
+
+/* Scale Reveal */
+@keyframes scale-reveal {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-reveal {
+  animation: scale-reveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Moroccan Pattern Accent (subtle) */
+.moroccan-accent {
+  position: relative;
+}
+
+.moroccan-accent::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='none' stroke='%23c9a96e' stroke-width='0.5' opacity='0.15'/%3E%3C/svg%3E");
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* ========================================
+   ANTIGRAVITY RING PARTICLES ANIMATION
+   Google Antigravity-style effect using CSS Houdini PaintWorklet
+   ======================================== */
+
+/* CSS Custom Properties for animation (Houdini) */
+@supports (background: paint(something)) {
+  @property --animation-tick {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+  }
+
+  @property --ring-radius {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 150;
+  }
+
+  @property --ring-x {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 50;
+  }
+
+  @property --ring-y {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 50;
+  }
+
+  @property --ring-interactive {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+  }
+}
+
+/* Ring animation keyframes */
+@keyframes ring-ripple {
+  0% {
+    --animation-tick: 0;
+  }
+
+  100% {
+    --animation-tick: 1;
+  }
+}
+
+@keyframes ring-breathe {
+  0% {
+    --ring-radius: 120;
+  }
+
+  100% {
+    --ring-radius: 220;
+  }
+}
+
+/* Antigravity background container */
+.antigravity-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  z-index: 0;
+
+  /* Particle ring configuration */
+  --ring-radius: 150;
+  --ring-thickness: 500;
+  --particle-count: 60;
+  --particle-rows: 20;
+  --particle-size: 2.5;
+  --particle-color: oklch(0.35 0.12 250);
+  /* Primary color */
+  --particle-min-alpha: 0.08;
+  --particle-max-alpha: 0.6;
+  --seed: 200;
+
+  /* Mouse position (updated via JS) */
+  --ring-x: 50;
+  --ring-y: 50;
+  --ring-interactive: 0;
+
+  /* Smooth transition for mouse following */
+  transition:
+    --ring-x 2.5s ease-out,
+    --ring-y 2.5s ease-out;
+}
+
+/* Apply paint worklet when supported */
+@supports (background: paint(something)) {
+  .antigravity-bg {
+    background-image: paint(ring-particles);
+    animation:
+      ring-ripple 6s linear infinite,
+      ring-breathe 6s ease-in-out infinite alternate;
+  }
+
+  /* Faster response when interactive */
+  .antigravity-bg.interactive {
+    transition:
+      --ring-x 0.3s ease-out,
+      --ring-y 0.3s ease-out;
+  }
+}
+
+/* Fallback for browsers without Houdini support */
+@supports not (background: paint(something)) {
+  .antigravity-bg {
+    background: radial-gradient(ellipse at var(--ring-x, 50%) var(--ring-y, 50%),
+        rgba(var(--primary), 0.08) 0%,
+        transparent 50%);
+  }
+}
+
+/* Dark mode adjustments */
+.dark .antigravity-bg {
+  --particle-color: oklch(0.60 0.15 250);
+  --particle-min-alpha: 0.1;
+  --particle-max-alpha: 0.7;
+}
+
+/* ========================================
+   SCROLL-TRIGGERED TYPEWRITER EFFECT
+   ======================================== */
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes type-text {
+  from {
+    background-size: 0;
+  }
+}
+
+.typewriter {
+  --typewriter-text-color: var(--foreground);
+
+  background:
+    /* highlight text */
+    linear-gradient(90deg, var(--typewriter-text-color) 0 0) 0 / calc(var(--n, 0) * 1ch) no-repeat
+    /* faded text */
+    transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* Note: Animation is triggered via JS intersection observer or scroll-timeline if supported */
+  transition: background-size 0.1s steps(1);
+}
+
+.typewriter.animate {
+  animation: type-text 2s ease-in both;
+}
+
+.typewriter::after {
+  content: "|";
+  background: var(--accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: blink 0.5s step-end infinite alternate;
+  margin-left: 2px;
+}
+
+/* ========================================
+   MOVING ICONS ANIMATION (TECH STACK)
+   ======================================== */
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes wobble-vertical {
+  from {
+    transform: translateY(20%);
+  }
+
+  to {
+    transform: translateY(-20%);
+  }
+}
+
+.animate-wobble {
+  animation: wobble-vertical 4s ease-in-out infinite alternate;
+}
+
+.animate-slide-in {
+  animation: slide-in-right 1s ease-out both;
+}
+
+/* ========================================
+   SCROLL-DRIVEN FEATURE REVEALS
+   ======================================== */
+
+@keyframes fade-a-bit {
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fake-clip-it {
+  to {
+    transform: scaleY(0);
+  }
+}
+
+.reveal-text {
+  animation: fade-a-bit 0.5s ease both;
+}
+
+.reveal-clip {
+  position: relative;
+}
+
+.reveal-clip::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  transform-origin: 0 100%;
+  background: var(--background);
+  animation: fake-clip-it 0.5s ease both;
+}
+
+@layer components {
+  .antigravity-text {
+    @apply font-light tracking-tight leading-none;
+    font-weight: 200;
+  }
+
+  .card-antigravity {
+    @apply relative bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl overflow-hidden transition-all duration-500;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  }
+
+  .card-antigravity:hover {
+    @apply border-white/20;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
   }
 }

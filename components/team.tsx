@@ -10,19 +10,19 @@ export function Team() {
 
     const team = [
         {
-            name: "zakaria Mrabet",
+            name: "Zakaria Mrabet",
             role: "Senior AI Engineer",
             image: "/zack.png",
             linkedin: "https://www.linkedin.com/in/zakariaemrabet/",     
         },
         {
-            name: "aymane biri",
-            role: "senior software/AI engineer",
+            name: "Aymane Biri",
+            role: "Senior software/AI engineer",
             image: "/aymane.jpeg",
             linkedin: "https://www.linkedin.com/in/aymane-biri/",
         },
         {
-            name: "oussama sallak",
+            name: "Oussama Sallak",
             role: "Full-Stack & AI Engineer",
             image: "/oussama.png",
             linkedin: "https://www.linkedin.com/in/osallak/",

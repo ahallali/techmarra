@@ -75,7 +75,7 @@ export function Contact({ full }: { full?: boolean }) {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">{t.contact.phone}</p>
-                  <a href="tel:+212614755457" className="text-foreground/70 hover:text-primary transition-colors">
+                  <a href="tel:+212612345678" className="text-foreground/70 hover:text-primary transition-colors">
                     +212 614 755 457
                   </a>
                 </div>

@@ -6,6 +6,7 @@ export const translations = {
       about: "À propos",
       contact: "Contact",
       getStarted: "Commencer",
+      language: "Langue",
     },
     hero: {
       promoLabel: "🎉 OFFRE DE LANCEMENT : -20% SUR VOTRE PREMIER PROJET WEB",
@@ -220,6 +221,7 @@ export const translations = {
       about: "About",
       contact: "Contact",
       getStarted: "Get Started",
+      language: "Language",
     },
     hero: {
       promoLabel: "🎉 LAUNCH OFFER: -20% ON YOUR FIRST WEB PROJECT",

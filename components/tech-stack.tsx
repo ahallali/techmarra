@@ -28,7 +28,11 @@ export function TechStack() {
 
                 <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
                     {techs.map((tech, index) => (
-                        <span key={index} className="text-xl md:text-2xl font-bold text-foreground/40 hover:text-primary transition-colors cursor-default">
+                        <span
+                            key={index}
+                            className="text-xl md:text-2xl font-bold text-foreground/40 hover:text-primary transition-colors cursor-default animate-wobble inline-block"
+                            style={{ animationDelay: `${index * -0.5}s` }}
+                        >
                             {tech}
                         </span>
                     ))}
