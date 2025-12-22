@@ -109,6 +109,11 @@ export const translations = {
       sectionTitle: "CONTACT",
       heading: "Donnons vie à vos ambitions",
       description: "Prêt à passer au niveau supérieur ? Remplissez le formulaire ci-dessous ou contactez-nous directement pour une consultation gratuite.",
+      // Title used above the Calendly embed on the contact page
+      scheduleTitle: "Planifier une réunion",
+  // Calendly fallback text when the embed fails to load, and the link text
+  calendlyFallback: "Si l'outil intégré ne charge pas, vous pouvez ouvrir la page de réservation directement :",
+  openCalendly: "Ouvrir Calendly",
       email: "Email",
       phone: "Téléphone",
       location: "Bureaux",
@@ -324,6 +329,11 @@ export const translations = {
       sectionTitle: "CONTACT",
       heading: "Let's Bring Your Ambitions to Life",
       description: "Ready to level up? Fill out the form below or contact us directly for a free consultation.",
+      // Title used above the Calendly embed on the contact page
+      scheduleTitle: "Schedule a meeting",
+  // Calendly fallback text when the embed fails to load, and the link text
+  calendlyFallback: "If the embedded scheduler doesn't load, you can open the booking page directly:",
+  openCalendly: "Open Calendly",
       email: "Email",
       phone: "Phone",
       location: "Office",

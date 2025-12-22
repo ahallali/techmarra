@@ -5,6 +5,10 @@ import { PortfolioHero } from "@/components/portfolio-hero"
 export const metadata: Metadata = {
   title: "Portfolio - TechMarra",
   description: "Explore our diverse portfolio of E-commerce, Corporate, and Hospitality projects.",
+   icons: {
+      icon: "/logo.png",
+      apple: "/logo.png",
+  },
 }
 
 export default function PortfolioPage() {

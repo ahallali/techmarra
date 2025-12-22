@@ -8,6 +8,10 @@ import { CTASection } from "@/components/cta-section"
 export const metadata: Metadata = {
   title: "About Us - TechMarra",
   description: "Learn about TechMarra and our mission to empower Moroccan businesses with digital excellence.",
+   icons: {
+      icon: "/logo.png",
+      apple: "/logo.png",
+  },
 }
 
 export default function AboutPage() {
