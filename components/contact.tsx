@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
+import { init, send } from "@emailjs/browser"
 import { Mail, Phone, MapPin } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { translations } from "@/lib/translations"
@@ -17,20 +18,56 @@ export function Contact({ full }: { full?: boolean }) {
     message: "",
   })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const formRef = useRef<HTMLFormElement | null>(null)
 
   const handleChange = (e: any) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault()
-    // Here you would send the form data to your backend
-    setSubmitted(true)
-    setTimeout(() => {
+    setError(null)
+    setLoading(true)
+
+    // Read EmailJS config from env (make sure these are set in your env)
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
+    if (!serviceId || !templateId || !publicKey) {
+      setError("Email service not configured. Please set the EmailJS env vars.")
+      setLoading(false)
+      return
+    }
+
+    try {
+      // initialize EmailJS (safe to call multiple times)
+      init(publicKey)
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        property: formData.property,
+        message: formData.message,
+        language,
+      }
+
+      await send(serviceId, templateId, templateParams, publicKey)
+
+      setSubmitted(true)
       setFormData({ name: "", email: "", phone: "", property: "", message: "" })
-      setSubmitted(false)
-    }, 3000)
+      // keep success visible briefly
+      setTimeout(() => setSubmitted(false), 3000)
+    } catch (err: any) {
+      console.error("EmailJS send error:", err)
+      setError("Failed to send message. Please try again or email us directly.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -175,10 +212,17 @@ export function Contact({ full }: { full?: boolean }) {
 
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
+                  disabled={loading}
+                  className={`w-full rounded-lg px-6 py-4 text-base font-semibold text-primary-foreground transition-opacity ${
+                    loading ? "bg-primary/70 cursor-not-allowed" : "bg-primary hover:opacity-90"
+                  }`}
                 >
-                  {t.contact.form.submit}
+                  {loading ? ("Sending...") : t.contact.form.submit}
                 </button>
+
+                {error && (
+                  <p className="text-sm text-red-500 text-center mt-2">{error}</p>
+                )}
 
                 <p className="text-xs text-foreground/60 text-center">
                   {t.contact.form.privacy}
