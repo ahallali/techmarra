@@ -13,6 +13,8 @@ dist/
 .env
 .env.*.local
 .env.local
+# Example env file - keep out of the repo if it contains secrets
+.env.example
 
 # Logs
 npm-debug.log*
