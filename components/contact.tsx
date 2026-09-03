@@ -1,9 +1,10 @@
 "use client"
 
-import { useState, useRef } from "react"
-import { init, send } from "@emailjs/browser"
+import { useState } from "react"
+import { send } from "@emailjs/browser"
 import { Mail, Phone, MapPin } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
+import { submitContact } from "@/lib/contact-submit.mjs"
 import { translations } from "@/lib/translations"
 
 export function Contact({ full }: { full?: boolean }) {
@@ -20,51 +21,30 @@ export function Contact({ full }: { full?: boolean }) {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const formRef = useRef<HTMLFormElement | null>(null)
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setError(null)
     setLoading(true)
 
-    // Read EmailJS config from env (make sure these are set in your env)
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-
-    if (!serviceId || !templateId || !publicKey) {
-      setError("Email service not configured. Please set the EmailJS env vars.")
-      setLoading(false)
-      return
-    }
-
     try {
-      // initialize EmailJS (safe to call multiple times)
-      init(publicKey)
-
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        property: formData.property,
-        message: formData.message,
-        language,
-      }
-
-      await send(serviceId, templateId, templateParams, publicKey)
+      await submitContact(formData, language, {
+        serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      }, send)
 
       setSubmitted(true)
       setFormData({ name: "", email: "", phone: "", property: "", message: "" })
       // keep success visible briefly
       setTimeout(() => setSubmitted(false), 3000)
-    } catch (err: any) {
-      console.error("EmailJS send error:", err)
-      setError("Failed to send message. Please try again or email us directly.")
+    } catch {
+      setError("Could not send your message. Your text has been kept; please try again or use the email link.")
     } finally {
       setLoading(false)
     }
@@ -145,11 +125,12 @@ export function Contact({ full }: { full?: boolean }) {
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form aria-busy={loading} onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">{t.contact.form.name}</label>
+                  <label htmlFor="contact-name" className="block text-sm font-semibold text-foreground mb-2">{t.contact.form.name}</label>
                   <input
                     type="text"
+                    id="contact-name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -161,10 +142,11 @@ export function Contact({ full }: { full?: boolean }) {
 
                 <div className="grid gap-6 md:grid-cols-2">
                   <div>
-                    <label className="block text-sm font-semibold text-foreground mb-2">{t.contact.form.email}</label>
+                    <label htmlFor="contact-email" className="block text-sm font-semibold text-foreground mb-2">{t.contact.form.email}</label>
                     <input
                       type="email"
-                      name="email"
+                      id="contact-email"
+                    name="email"
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -173,10 +155,11 @@ export function Contact({ full }: { full?: boolean }) {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-foreground mb-2">{t.contact.form.phone}</label>
+                    <label htmlFor="contact-phone" className="block text-sm font-semibold text-foreground mb-2">{t.contact.form.phone}</label>
                     <input
                       type="tel"
-                      name="phone"
+                      id="contact-phone"
+                    name="phone"
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground placeholder:text-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary"
@@ -186,9 +169,10 @@ export function Contact({ full }: { full?: boolean }) {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">{t.contact.form.property}</label>
+                  <label htmlFor="contact-property" className="block text-sm font-semibold text-foreground mb-2">{t.contact.form.property}</label>
                   <input
                     type="text"
+                    id="contact-property"
                     name="property"
                     value={formData.property}
                     onChange={handleChange}
@@ -198,8 +182,9 @@ export function Contact({ full }: { full?: boolean }) {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">{t.contact.form.message}</label>
+                  <label htmlFor="contact-message" className="block text-sm font-semibold text-foreground mb-2">{t.contact.form.message}</label>
                   <textarea
+                    id="contact-message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
