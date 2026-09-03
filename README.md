@@ -32,6 +32,6 @@ Configure `NEXT_PUBLIC_EMAILJS_SERVICE_ID`, `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` an
 
 ## Current engineering limitations
 
-There is no automated test suite. The Next.js configuration currently bypasses TypeScript build errors, so a successful build alone is not a type-safety check. Image optimization is disabled. These should be addressed before treating this repository as a production-quality engineering example.
+Run `pnpm test` for contact-delivery validation and failure tests, and `pnpm typecheck` for TypeScript. Builds now enforce TypeScript errors. Image optimization is disabled. Full browser accessibility checks and end-to-end contact delivery tests remain useful next steps.
 
 This README describes the source implementation; it does not claim that live contact delivery has been tested.

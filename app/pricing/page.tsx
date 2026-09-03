@@ -16,7 +16,7 @@ export default function PricingPage() {
   return (
     <main className="min-h-screen bg-background">
       <PricingHero />
-      <Pricing full={true} />
+      <Pricing />
     </main>
   )
 }
